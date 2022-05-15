@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.3
 # Built for x86_64-redhat-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat May 14 22:00:08 2022
+# Make data base, printed on Sat May 14 23:10:45 2022
 
 # Variables
 
@@ -25,7 +23,7 @@ STARSHIP_SESSION_KEY = 4400903749592988
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-8af87cfd-1787-44be-bdbb-c83f17c46164.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-28d86ca5-5df7-4fdd-a9f0-5ced9d8cf90c.sock
 # environment
 VSCODE_CWD = /home/kayla
 # environment
@@ -47,7 +45,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /home/kayla/Programming/Cpp/vulkan-learning
+PWD = /home/kayla/Programming/Cpp/hello-triangle
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -81,7 +79,7 @@ LMOD_CMD = /usr/share/lmod/lmod/libexec/lmod
 # makefile
 MAKEFLAGS = pqrR
 # makefile
-CURDIR := /home/kayla/Programming/Cpp/vulkan-learning
+CURDIR := /home/kayla/Programming/Cpp/hello-triangle
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -191,7 +189,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # environment
 BASH_ENV = /usr/share/lmod/lmod/init/bash
 # makefile
-.DEFAULT_GOAL := VulkanTest
+.DEFAULT_GOAL := HelloTriangle
 # environment
 SYSTEMD_EXEC_PID = 3315
 # environment
@@ -266,13 +264,12 @@ GDMSESSION = gnome-xorg
 # Pattern-specific Variable Values
 
 # No pattern-specific variable values.
- 
 
 # Directories
 
-# . (device 40, inode 1482192): 6 files, no impossibilities.
+# . (device 40, inode 1489443): 8 files, no impossibilities.
 
-# 6 files, no impossibilities in 1 directories.
+# 8 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -280,12 +277,15 @@ GDMSESSION = gnome-xorg
 
 # Files
 
-VulkanTest: src/main.cpp
+HelloTriangle: src/main.cpp
 #  Implicit rule search has not been done.
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'makefile', line 5):
-	g++ $(CFLAGS) -o VulkanTest main.cpp $(LDFLAGS)
+	g++ $(CFLAGS) -o build/HelloTriangle src/main.cpp $(LDFLAGS)
 
 # Not a target:
 src/main.cpp:
@@ -299,7 +299,7 @@ clean:
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'makefile', line 13):
-	rm -f VulkanTest
+	rm -f build/HelloTriangle
 
 # Not a target:
 .DEFAULT:
@@ -314,18 +314,18 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
-test: VulkanTest
+test: HelloTriangle
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'makefile', line 10):
-	./VulkanTest
+	./build/HelloTriangle
 
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-14 21:59:57.57080988
+#  Last modified 2022-05-14 23:09:13.030014875
 #  File has been updated.
 #  Successfully updated.
 
@@ -342,12 +342,12 @@ makefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 15 / storage = 123 B / avg = 8 B
-# current buf: size = 8162 B / used = 123 B / count = 15 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 18 / storage = 148 B / avg = 8 B
+# current buf: size = 8162 B / used = 148 B / count = 18 / avg = 8 B
 
-# strcache performance: lookups = 27 / hit rate = 44%
+# strcache performance: lookups = 29 / hit rate = 37%
 # hash-table stats:
-# Load=15/8192=0%, Rehash=0, Collisions=0/27=0%
-# Finished Make data base on Sat May 14 22:00:08 2022
+# Load=18/8192=0%, Rehash=0, Collisions=0/29=0%
+# Finished Make data base on Sat May 14 23:10:45 2022
 
  
