@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/kayla/Programming/Cpp/vulkan-learning'
+make: 'VulkanTest' is up to date.
+make: Leaving directory '/home/kayla/Programming/Cpp/vulkan-learning'
+ 
