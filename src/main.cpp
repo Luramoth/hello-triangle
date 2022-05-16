@@ -5,10 +5,21 @@
 #include <stdexcept>
 #include <cstdlib>
 #include <vector>
+#include <cstring>
 
 //constants
 const uint32_t WIDTH = 800;
 const uint32_t HEIGHT = 600;
+
+const std::vector<const char*> validationLayers = {
+	"VK_LAYER_KHRONOS_validation"
+};
+
+#ifdef NDEBUG // if in debug mode then enable debug validation layers which will compramise performance
+	const bool enableValidationLayers = false;
+#else
+	const bool enableValidationLayers = true;
+#endif
 
 class HelloTriangleApplication {// class that holds the actual application
 public:
@@ -51,6 +62,10 @@ private:
 	}
 
 	void createInstance(){
+		if (enableValidationLayers && !checkValidationLayerSupport()){
+			throw std::runtime_error("validation layers requested, not available!");// throw an error if shit aint doin right with the validation layers
+		}
+
 		VkApplicationInfo appInfo{};//start up thing to get all the parameters for vulkan
 		appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
 		appInfo.pApplicationName = "Hello Triangle";
@@ -60,6 +75,13 @@ private:
 		appInfo.apiVersion = VK_API_VERSION_1_0;
 
 		VkInstanceCreateInfo createInfo{};// use all that to make some info
+		if (enableValidationLayers) { // dont forget a bunch of validation layers
+			createInfo.enabledLayerCount = static_cast<uint32_t>(validationLayers.size());
+			createInfo.ppEnabledLayerNames = validationLayers.data();
+		} else {
+			createInfo.enabledLayerCount = 0;
+		}
+
 		createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
 		createInfo.pApplicationInfo = &appInfo;
 
@@ -89,12 +111,41 @@ private:
 		std::cout << "available extentions:\n";
 
 		for (const auto& extension : extensions) {
-			std::cout << '\t' << extension.extensionName << '\n';
+			std::cout << '\t' << extension.extensionName << '\n';// prints all available extensions
 		}
+	}
+
+	bool  checkValidationLayerSupport(){ // function that checks if we have all the vulkan validation layers
+		uint32_t layerCount;
+		vkEnumerateInstanceLayerProperties(&layerCount, nullptr);
+
+		std::vector<VkLayerProperties> availableLayers(layerCount);
+		vkEnumerateInstanceLayerProperties(&layerCount, availableLayers.data());
+
+		for (const char* layerName : validationLayers) {
+			bool layerFound = false;
+
+			for (const auto& layerProperties : availableLayers) {
+				if (strcmp(layerName, layerProperties.layerName) == 0) {
+					layerFound = true;
+					break;
+				}
+			}
+
+			if (!layerFound) {
+				return false;
+			}
+		}
+
+		return true;
 	}
 };
 
 int main() {
+	if (enableValidationLayers){
+		std::cout<<"running in debug mode\n";
+	}
+
 	HelloTriangleApplication app;
 
 	try {
