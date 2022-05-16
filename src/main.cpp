@@ -43,7 +43,7 @@ private:
 	}
 
 	void cleanup() {
-		vkDestroyInstance(instance,nullptr);
+		vkDestroyInstance(instance,nullptr);//delete the vulkan instance
 
 		glfwDestroyWindow(window);//get rid of the window class and free up the allocated memory
 
