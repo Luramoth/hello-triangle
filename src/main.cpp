@@ -43,6 +43,8 @@ private:
 	}
 
 	void cleanup() {
+		vkDestroyInstance(instance,nullptr);
+
 		glfwDestroyWindow(window);//get rid of the window class and free up the allocated memory
 
 		glfwTerminate();//stop glfw from running
