@@ -1,3 +1,15 @@
 {
-	"makefile.extensionOutputFolder": "./.vscode"
+	"makefile.extensionOutputFolder": "./.vscode",
+	"files.associations": {
+		"array": "cpp",
+		"string": "cpp",
+		"string_view": "cpp"
+	},
+	"makefile.launchConfigurations": [
+		{
+			"cwd": "/home/kayla/Programming/Cpp/hello-triangle/build",
+			"binaryPath": "/home/kayla/Programming/Cpp/hello-triangle/build/HelloTriangle",
+			"binaryArgs": []
+		}
+	]
 }

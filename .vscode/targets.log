@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun May 15 14:18:12 2022
+# Make data base, printed on Sun May 15 21:13:52 2022
 
 # Variables
 
@@ -21,13 +21,19 @@ NO_AT_BRIDGE = 1
 # environment
 LMOD_SETTARG_FULL_SUPPORT = no
 # environment
+STARSHIP_SESSION_KEY = 1189212067303248
+# environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-9fa84cc9-135c-422b-9613-6d0601401ead.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-849d3b97-d946-4684-8953-e74f8b58acda.sock
 # environment
 VSCODE_CWD = /home/kayla
 # environment
+GPG_TTY = not a tty
+# environment
 WINDOWPATH = 2
+# environment
+NVM_DIR = /home/kayla/.nvm
 # environment
 GDM_LANG = en_US.UTF-8
 # default
@@ -93,6 +99,8 @@ SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # default
 .SHELLFLAGS := -c
 # environment
+NVM_BIN = /home/kayla/.nvm/versions/node/v18.1.0/bin
+# environment
 HISTSIZE = 1000
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
@@ -105,7 +113,7 @@ MAKEFILE_LIST := makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 13416
+VSCODE_PID = 53539
 # environment
 SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS = 0
 # environment
@@ -117,7 +125,7 @@ SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/3200,unix/unix:/tmp/.ICE-unix/3200
 # automatic
 *F = $(notdir $*)
 # environment
-MANPATH = /usr/share/lmod/lmod/share/man:
+MANPATH = /home/kayla/.nvm/versions/node/v18.1.0/share/man:/usr/share/lmod/lmod/share/man:
 # environment
 MODULEPATH = /etc/modulefiles:/usr/share/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core
 # environment
@@ -147,7 +155,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /usr/lib64/ccache:/home/kayla/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/kayla/.dotnet/tools
+PATH = /home/kayla/.nvm/versions/node/v18.1.0/bin:/usr/lib64/ccache:/home/kayla/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/kayla/.dotnet/tools
 # environment
 MOZ_GMP_PATH = /usr/lib64/mozilla/plugins/gmp-gmpopenh264/system-installed
 # default
@@ -207,7 +215,9 @@ which_declare = typeset -f
 # environment
 DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 13416
+STARSHIP_SHELL = zsh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 53539
 # environment
 SSH_AGENT_PID = 3094
 # environment
@@ -216,6 +226,8 @@ _ = /usr/bin/make
 XDG_RUNTIME_DIR = /run/user/1000
 # makefile (from 'makefile', line 1)
 CFLAGS = -std=c++17 -O2
+# environment
+NVM_CD_FLAGS = -q
 # environment
 JOURNAL_STREAM = 8:42396
 # environment
@@ -249,7 +261,7 @@ LMOD_VERSION = 8.6.11
 # environment
 GDMSESSION = gnome-xorg
 # variable set hash-table stats:
-# Load=118/1024=12%, Rehash=0, Collisions=4/148=3%
+# Load=124/1024=12%, Rehash=0, Collisions=4/154=3%
 
 # Pattern-specific Variable Values
 
@@ -312,7 +324,8 @@ test: HelloTriangle
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-14 23:09:13.030014875
+ 
+#  Last modified 2022-05-15 20:35:24.203679996
 #  File has been updated.
 #  Successfully updated.
 
@@ -334,8 +347,7 @@ makefile:
 
 # strcache performance: lookups = 29 / hit rate = 37%
 # hash-table stats:
- 
 # Load=18/8192=0%, Rehash=0, Collisions=0/29=0%
-# Finished Make data base on Sun May 15 14:18:12 2022
+# Finished Make data base on Sun May 15 21:13:52 2022
 
  
