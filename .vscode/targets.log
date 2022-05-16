@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun May 15 22:55:57 2022
+# Make data base, printed on Mon May 16 00:25:39 2022
 
 # Variables
 
@@ -25,7 +25,7 @@ STARSHIP_SESSION_KEY = 1189212067303248
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-3f38bc2f-06ad-415a-9703-22540c2b09dd.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-ee7dd08e-8a4e-4ed7-9511-10b394c15daa.sock
 # environment
 VSCODE_CWD = /home/kayla
 # environment
@@ -292,10 +292,10 @@ src/main.cpp:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
+ 
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'makefile', line 13):
@@ -348,6 +348,6 @@ makefile:
 # strcache performance: lookups = 29 / hit rate = 37%
 # hash-table stats:
 # Load=18/8192=0%, Rehash=0, Collisions=0/29=0%
-# Finished Make data base on Sun May 15 22:55:57 2022
+# Finished Make data base on Mon May 16 00:25:39 2022
 
  
