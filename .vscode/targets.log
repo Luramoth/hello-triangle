@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon May 16 00:25:39 2022
+# Make data base, printed on Wed May 18 18:48:06 2022
 
 # Variables
 
@@ -21,11 +21,11 @@ NO_AT_BRIDGE = 1
 # environment
 LMOD_SETTARG_FULL_SUPPORT = no
 # environment
-STARSHIP_SESSION_KEY = 1189212067303248
+STARSHIP_SESSION_KEY = 8676260651036323
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-ee7dd08e-8a4e-4ed7-9511-10b394c15daa.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e49d07ac-7716-46d4-b47f-73e5c6f0a54b.sock
 # environment
 VSCODE_CWD = /home/kayla
 # environment
@@ -113,7 +113,7 @@ MAKEFILE_LIST := makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 53539
+VSCODE_PID = 27226
 # environment
 SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS = 0
 # environment
@@ -121,7 +121,7 @@ XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/3200,unix/unix:/tmp/.ICE-unix/3200
+SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/20050,unix/unix:/tmp/.ICE-unix/20050
 # automatic
 *F = $(notdir $*)
 # environment
@@ -167,7 +167,7 @@ MODULESHOME = /usr/share/lmod/lmod
 # environment
 LMOD_sys = Linux
 # environment
-INVOCATION_ID = 4ee48d9697a64ecd9af4033790998152
+INVOCATION_ID = 58c24151dd184db7b5363356d2e049a7
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -193,7 +193,7 @@ BASH_ENV = /usr/share/lmod/lmod/init/bash
 # makefile
 .DEFAULT_GOAL := HelloTriangle
 # environment
-SYSTEMD_EXEC_PID = 3255
+SYSTEMD_EXEC_PID = 20099
 # environment
 MODULEPATH_ROOT = /usr/share/modulefiles
 # environment
@@ -209,7 +209,7 @@ MAKE_VERSION := 4.3
 # makefile (from 'makefile', line 2)
 LDFLAGS = -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
 # environment
-MANAGERPID = 2232
+MANAGERPID = 19820
 # environment
 which_declare = typeset -f
 # environment
@@ -217,9 +217,9 @@ DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/
 # environment
 STARSHIP_SHELL = zsh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 53539
+GIO_LAUNCHED_DESKTOP_FILE_PID = 27226
 # environment
-SSH_AGENT_PID = 3094
+SSH_AGENT_PID = 20001
 # environment
 _ = /usr/bin/make
 # environment
@@ -229,7 +229,7 @@ CFLAGS = -std=c++17 -O2
 # environment
 NVM_CD_FLAGS = -q
 # environment
-JOURNAL_STREAM = 8:42396
+JOURNAL_STREAM = 8:55265
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -293,9 +293,9 @@ src/main.cpp:
 #  File has not been updated.
 
 clean:
+ 
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
- 
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'makefile', line 13):
@@ -348,6 +348,6 @@ makefile:
 # strcache performance: lookups = 29 / hit rate = 37%
 # hash-table stats:
 # Load=18/8192=0%, Rehash=0, Collisions=0/29=0%
-# Finished Make data base on Mon May 16 00:25:39 2022
+# Finished Make data base on Wed May 18 18:48:06 2022
 
  
