@@ -43,6 +43,9 @@ public:
 private:
 	VkInstance instance;// create Vulkan instance
 	VkDebugUtilsMessengerEXT debugMessenger;// make a class for debug
+
+	VkSurfaceKHR surface;//  create a surface class so vulkan can actually draw to the window
+
 	VkDevice device;// create class for physical device for vulkan
 	VkQueue graphicsQueue;// create class for graphics queue
 
@@ -62,6 +65,7 @@ private:
 	void initVulkan() {
 		createInstance(); // make vulkan instance
 		setupDebugMessenger(); // setup all the vulkan debug stuff
+		createSurface();// create the surface for vulkan to render to
 		pickPhysicalDevice(); // pick a device to run vulkan
 		createLogicalDevice();// create a logical device to run vulkan
 		
@@ -84,6 +88,8 @@ private:
 		if (enableValidationLayers) {
 			DestroyDebugUtilsMessengerEXT(instance, debugMessenger, nullptr);
 		}
+
+		vkDestroySurfaceKHR(instance, surface, nullptr);
 
 		vkDestroyInstance(instance,nullptr);//delete the vulkan instance
 	}
@@ -328,5 +334,11 @@ private:
 		}
 
 		vkGetDeviceQueue(device, indices.graphicsFamily.value(), 0, &graphicsQueue);// receive queue handles
+	}
+
+	void createSurface() {
+		if (glfwCreateWindowSurface(instance, window, nullptr, &surface) != VK_SUCCESS) {
+			throw std::runtime_error("failed to create window surface!");
+		}
 	}
 };
