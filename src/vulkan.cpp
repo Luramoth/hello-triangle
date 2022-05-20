@@ -44,6 +44,7 @@ private:
 	VkInstance instance;// create Vulkan instance
 	VkDebugUtilsMessengerEXT debugMessenger;// make a class for debug
 	VkDevice device;// create class for physical device for vulkan
+	VkQueue graphicsQueue;// create class for graphics queue
 
 	GLFWwindow* window;// make a window class for glfw
 
@@ -325,5 +326,7 @@ private:
 		if (vkCreateDevice(physicalDevice, &createInfo, nullptr, &device) != VK_SUCCESS) {
 			throw std::runtime_error("failed to create logical device!");
 		}
+
+		vkGetDeviceQueue(device, indices.graphicsFamily.value(), 0, &graphicsQueue);// receive queue handles
 	}
 };
