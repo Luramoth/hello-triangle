@@ -42,8 +42,12 @@ public:
 
 private:
 	VkInstance instance;// create Vulkan instance
-	VkDebugUtilsMessengerEXT debugMessenger;
+	VkDebugUtilsMessengerEXT debugMessenger;// make a class for debug
+	VkDevice device;// create class for physical device for vulkan
+
 	GLFWwindow* window;// make a window class for glfw
+
+	VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
 
 	void initWindow(){
 		glfwInit(); //initialise glfw
@@ -58,6 +62,7 @@ private:
 		createInstance(); // make vulkan instance
 		setupDebugMessenger(); // setup all the vulkan debug stuff
 		pickPhysicalDevice(); // pick a device to run vulkan
+		createLogicalDevice();// create a logical device to run vulkan
 	}
 
 	void mainLoop() {
@@ -220,13 +225,8 @@ private:
 	}
 
 	void pickPhysicalDevice() {
-		VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
-
 		uint32_t deviceCount = 0;
 		vkEnumeratePhysicalDevices(instance, &deviceCount, nullptr);// listing every graphics device with vulkan support
-
-		std::cout << "amount of devices:\n";
-		std::cout << deviceCount << "\n";
 
 		if (deviceCount == 0) {
 			throw std::runtime_error("failed to find a gpu with vulkan support");// if there isent any devices with vulkan support there no point in continuing
@@ -248,7 +248,7 @@ private:
 	}
 
 	// queue family indecies, whatever that means
-	struct QueueFamilyIndicies {
+	struct QueueFamilyindices {
 		std::optional<uint32_t> graphicsFamily;
 
 		bool isComplete() {
@@ -256,8 +256,8 @@ private:
 		}
 	};
 
-	QueueFamilyIndicies findQueueFamilies(VkPhysicalDevice device){
-		QueueFamilyIndicies indices;
+	QueueFamilyindices findQueueFamilies(VkPhysicalDevice device){
+		QueueFamilyindices indices;
 
 		uint32_t queueFamilyCount = 0;
 		vkGetPhysicalDeviceQueueFamilyProperties(device, &queueFamilyCount, nullptr);
@@ -283,8 +283,20 @@ private:
 
 	// some stuff to tell if graphics device is suitable at all
 	bool isDeviceSuitable(VkPhysicalDevice device) {
-		QueueFamilyIndicies indecies = findQueueFamilies(device);// see if tis suitable using family indecies
+		QueueFamilyindices indecies = findQueueFamilies(device);// see if tis suitable using family indecies
 
 		return indecies.isComplete();
+	}
+
+	void createLogicalDevice() {
+		QueueFamilyindices indices = findQueueFamilies(physicalDevice);
+
+		VkDeviceQueueCreateInfo queueCreateInfo{};
+		queueCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
+		queueCreateInfo.queueFamilyIndex = indices.graphicsFamily.value();
+		queueCreateInfo.queueCount = 1;
+
+		float queuePriority =  1.0f;
+		queueCreateInfo.pQueuePriorities = &queuePriority;
 	}
 };
