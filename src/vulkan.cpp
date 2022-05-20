@@ -291,13 +291,13 @@ private:
 	void createLogicalDevice() {
 		QueueFamilyindices indices = findQueueFamilies(physicalDevice);
 
-		VkDeviceQueueCreateInfo queueCreateInfo{};
+		VkDeviceQueueCreateInfo queueCreateInfo{};// create info for queues
 		queueCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
 		queueCreateInfo.queueFamilyIndex = indices.graphicsFamily.value();
 		queueCreateInfo.queueCount = 1;
 
 		float queuePriority =  1.0f;
-		queueCreateInfo.pQueuePriorities = &queuePriority;
+		queueCreateInfo.pQueuePriorities = &queuePriority;// set up mandatory priority to queues
 
 		VkPhysicalDeviceFeatures deviceFeatures{};
 	}
