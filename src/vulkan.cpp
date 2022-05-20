@@ -166,7 +166,7 @@ private:
 		}
 	}
 
-	bool  checkValidationLayerSupport(){ // function that checks if we have all the vulkan validation layers
+	bool checkValidationLayerSupport(){ // function that checks if we have all the vulkan validation layers
 		uint32_t layerCount;
 		vkEnumerateInstanceLayerProperties(&layerCount, nullptr);
 
@@ -261,9 +261,10 @@ private:
 	// queue family indecies, whatever that means
 	struct QueueFamilyindices {
 		std::optional<uint32_t> graphicsFamily;
+		std::optional<uint32_t> presentFamily;
 
 		bool isComplete() {
-			return graphicsFamily.has_value();
+			return graphicsFamily.has_value() && presentFamily.has_value();
 		}
 	};
 
@@ -276,17 +277,25 @@ private:
 		std::vector<VkQueueFamilyProperties> queueFamilies(queueFamilyCount);
 		vkGetPhysicalDeviceQueueFamilyProperties(device, &queueFamilyCount, queueFamilies.data());
 
+		VkBool32 presentSupport = false;
+
 		int i = 0;
 		for (const auto& queueFamily : queueFamilies) {
 			if (queueFamily.queueFlags & VK_QUEUE_GRAPHICS_BIT) {
 				indices.graphicsFamily = i;
 			}
 
+			vkGetPhysicalDeviceSurfaceSupportKHR(device, i, surface, &presentSupport);// now check if the device even has support for this feature
+
 			if (indices.isComplete()) {
 				break;
 			}
 
 			i++;
+		}
+
+		if (presentSupport){
+			indices.presentFamily = 1;
 		}
 
 		return indices;
