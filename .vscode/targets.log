@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed May 18 18:48:06 2022
+# Make data base, printed on Fri May 20 12:58:47 2022
 
 # Variables
 
@@ -21,19 +21,13 @@ NO_AT_BRIDGE = 1
 # environment
 LMOD_SETTARG_FULL_SUPPORT = no
 # environment
-STARSHIP_SESSION_KEY = 8676260651036323
-# environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e49d07ac-7716-46d4-b47f-73e5c6f0a54b.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-6d53574e-2436-485c-8114-08eacec7a088.sock
 # environment
 VSCODE_CWD = /home/kayla
 # environment
-GPG_TTY = not a tty
-# environment
 WINDOWPATH = 2
-# environment
-NVM_DIR = /home/kayla/.nvm
 # environment
 GDM_LANG = en_US.UTF-8
 # default
@@ -99,8 +93,6 @@ SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # default
 .SHELLFLAGS := -c
 # environment
-NVM_BIN = /home/kayla/.nvm/versions/node/v18.1.0/bin
-# environment
 HISTSIZE = 1000
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
@@ -113,7 +105,7 @@ MAKEFILE_LIST := makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 27226
+VSCODE_PID = 10874
 # environment
 SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS = 0
 # environment
@@ -121,11 +113,11 @@ XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/20050,unix/unix:/tmp/.ICE-unix/20050
+SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/3131,unix/unix:/tmp/.ICE-unix/3131
 # automatic
 *F = $(notdir $*)
 # environment
-MANPATH = /home/kayla/.nvm/versions/node/v18.1.0/share/man:/usr/share/lmod/lmod/share/man:
+MANPATH = /usr/share/lmod/lmod/share/man:
 # environment
 MODULEPATH = /etc/modulefiles:/usr/share/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core
 # environment
@@ -155,7 +147,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /home/kayla/.nvm/versions/node/v18.1.0/bin:/usr/lib64/ccache:/home/kayla/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/kayla/.dotnet/tools
+PATH = /usr/lib64/ccache:/home/kayla/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/kayla/.dotnet/tools
 # environment
 MOZ_GMP_PATH = /usr/lib64/mozilla/plugins/gmp-gmpopenh264/system-installed
 # default
@@ -167,7 +159,7 @@ MODULESHOME = /usr/share/lmod/lmod
 # environment
 LMOD_sys = Linux
 # environment
-INVOCATION_ID = 58c24151dd184db7b5363356d2e049a7
+INVOCATION_ID = 26fd6d59361546b991cf09dc10dc4c79
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -193,7 +185,7 @@ BASH_ENV = /usr/share/lmod/lmod/init/bash
 # makefile
 .DEFAULT_GOAL := HelloTriangle
 # environment
-SYSTEMD_EXEC_PID = 20099
+SYSTEMD_EXEC_PID = 3187
 # environment
 MODULEPATH_ROOT = /usr/share/modulefiles
 # environment
@@ -209,17 +201,15 @@ MAKE_VERSION := 4.3
 # makefile (from 'makefile', line 2)
 LDFLAGS = -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
 # environment
-MANAGERPID = 19820
+MANAGERPID = 2865
 # environment
 which_declare = typeset -f
 # environment
 DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
 # environment
-STARSHIP_SHELL = zsh
+GIO_LAUNCHED_DESKTOP_FILE_PID = 10874
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 27226
-# environment
-SSH_AGENT_PID = 20001
+SSH_AGENT_PID = 3081
 # environment
 _ = /usr/bin/make
 # environment
@@ -227,9 +217,7 @@ XDG_RUNTIME_DIR = /run/user/1000
 # makefile (from 'makefile', line 1)
 CFLAGS = -std=c++17 -O2
 # environment
-NVM_CD_FLAGS = -q
-# environment
-JOURNAL_STREAM = 8:55265
+JOURNAL_STREAM = 8:37385
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -261,7 +249,7 @@ LMOD_VERSION = 8.6.11
 # environment
 GDMSESSION = gnome-xorg
 # variable set hash-table stats:
-# Load=124/1024=12%, Rehash=0, Collisions=4/154=3%
+# Load=118/1024=12%, Rehash=0, Collisions=4/148=3%
 
 # Pattern-specific Variable Values
 
@@ -293,7 +281,6 @@ src/main.cpp:
 #  File has not been updated.
 
 clean:
- 
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -309,6 +296,7 @@ clean:
 
 # Not a target:
 all:
+ 
 #  Command line target.
 #  Implicit rule search has been done.
 #  File does not exist.
@@ -348,6 +336,6 @@ makefile:
 # strcache performance: lookups = 29 / hit rate = 37%
 # hash-table stats:
 # Load=18/8192=0%, Rehash=0, Collisions=0/29=0%
-# Finished Make data base on Wed May 18 18:48:06 2022
+# Finished Make data base on Fri May 20 12:58:47 2022
 
  
