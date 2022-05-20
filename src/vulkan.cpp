@@ -63,6 +63,8 @@ private:
 		setupDebugMessenger(); // setup all the vulkan debug stuff
 		pickPhysicalDevice(); // pick a device to run vulkan
 		createLogicalDevice();// create a logical device to run vulkan
+		
+		std::cout << "initialisation successful!\n";
 	}
 
 	void mainLoop() {
@@ -72,6 +74,8 @@ private:
 	}
 
 	void cleanup() {
+		vkDestroyDevice(device, nullptr);
+
 		glfwDestroyWindow(window);//get rid of the window class and free up the allocated memory
 
 		glfwTerminate();//stop glfw from running
@@ -300,5 +304,26 @@ private:
 		queueCreateInfo.pQueuePriorities = &queuePriority;// set up mandatory priority to queues
 
 		VkPhysicalDeviceFeatures deviceFeatures{};
+
+		VkDeviceCreateInfo createInfo{};// time to start creating info for the actual device
+		createInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
+		createInfo.pQueueCreateInfos = &queueCreateInfo;
+		createInfo.queueCreateInfoCount = 1;
+
+		createInfo.pEnabledFeatures = &deviceFeatures;
+
+		createInfo.enabledExtensionCount = 0;
+
+		//some legacy stuff, compatability and all that
+		if (enableValidationLayers) {
+			createInfo.enabledLayerCount = static_cast<uint32_t>(validationLayers.size());
+			createInfo.ppEnabledLayerNames = validationLayers.data();
+		} else {
+			createInfo.enabledLayerCount = 0;
+		}
+
+		if (vkCreateDevice(physicalDevice, &createInfo, nullptr, &device) != VK_SUCCESS) {
+			throw std::runtime_error("failed to create logical device!");
+		}
 	}
 };
