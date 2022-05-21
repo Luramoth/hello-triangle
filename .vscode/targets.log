@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri May 20 12:58:47 2022
+# Make data base, printed on Sat May 21 13:22:22 2022
 
 # Variables
 
@@ -21,13 +21,19 @@ NO_AT_BRIDGE = 1
 # environment
 LMOD_SETTARG_FULL_SUPPORT = no
 # environment
+STARSHIP_SESSION_KEY = 1444010867206017
+# environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-6d53574e-2436-485c-8114-08eacec7a088.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-6c1ea777-bbd1-4912-aec0-30aed61ac5ec.sock
 # environment
 VSCODE_CWD = /home/kayla
 # environment
+GPG_TTY = not a tty
+# environment
 WINDOWPATH = 2
+# environment
+NVM_DIR = /home/kayla/.nvm
 # environment
 GDM_LANG = en_US.UTF-8
 # default
@@ -61,7 +67,7 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/kayla/.config/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+VSCODE_CODE_CACHE_PATH = /home/kayla/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 LANG = C
 # environment
@@ -93,6 +99,8 @@ SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # default
 .SHELLFLAGS := -c
 # environment
+NVM_BIN = /home/kayla/.nvm/versions/node/v18.1.0/bin
+# environment
 HISTSIZE = 1000
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
@@ -105,7 +113,7 @@ MAKEFILE_LIST := makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 10874
+VSCODE_PID = 21732
 # environment
 SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS = 0
 # environment
@@ -113,11 +121,11 @@ XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/3131,unix/unix:/tmp/.ICE-unix/3131
+SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/10091,unix/unix:/tmp/.ICE-unix/10091
 # automatic
 *F = $(notdir $*)
 # environment
-MANPATH = /usr/share/lmod/lmod/share/man:
+MANPATH = /home/kayla/.nvm/versions/node/v18.1.0/share/man:/usr/share/lmod/lmod/share/man:
 # environment
 MODULEPATH = /etc/modulefiles:/usr/share/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core
 # environment
@@ -147,7 +155,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /usr/lib64/ccache:/home/kayla/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/kayla/.dotnet/tools
+PATH = /home/kayla/.nvm/versions/node/v18.1.0/bin:/usr/lib64/ccache:/home/kayla/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/kayla/.dotnet/tools
 # environment
 MOZ_GMP_PATH = /usr/lib64/mozilla/plugins/gmp-gmpopenh264/system-installed
 # default
@@ -159,7 +167,7 @@ MODULESHOME = /usr/share/lmod/lmod
 # environment
 LMOD_sys = Linux
 # environment
-INVOCATION_ID = 26fd6d59361546b991cf09dc10dc4c79
+INVOCATION_ID = e51db2d10e5646c593ae91a922610b92
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -185,7 +193,7 @@ BASH_ENV = /usr/share/lmod/lmod/init/bash
 # makefile
 .DEFAULT_GOAL := HelloTriangle
 # environment
-SYSTEMD_EXEC_PID = 3187
+SYSTEMD_EXEC_PID = 10147
 # environment
 MODULEPATH_ROOT = /usr/share/modulefiles
 # environment
@@ -201,15 +209,17 @@ MAKE_VERSION := 4.3
 # makefile (from 'makefile', line 2)
 LDFLAGS = -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
 # environment
-MANAGERPID = 2865
+MANAGERPID = 9870
 # environment
 which_declare = typeset -f
 # environment
 DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 10874
+STARSHIP_SHELL = zsh
 # environment
-SSH_AGENT_PID = 3081
+GIO_LAUNCHED_DESKTOP_FILE_PID = 21732
+# environment
+SSH_AGENT_PID = 10043
 # environment
 _ = /usr/bin/make
 # environment
@@ -217,7 +227,9 @@ XDG_RUNTIME_DIR = /run/user/1000
 # makefile (from 'makefile', line 1)
 CFLAGS = -std=c++17 -O2
 # environment
-JOURNAL_STREAM = 8:37385
+NVM_CD_FLAGS = -q
+# environment
+JOURNAL_STREAM = 8:33595
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -229,7 +241,7 @@ QT_IM_MODULE = ibus
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-bedeb6ad-1.67.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-bedeb6ad-1.67.2-main.sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -249,7 +261,7 @@ LMOD_VERSION = 8.6.11
 # environment
 GDMSESSION = gnome-xorg
 # variable set hash-table stats:
-# Load=118/1024=12%, Rehash=0, Collisions=4/148=3%
+# Load=124/1024=12%, Rehash=0, Collisions=4/154=3%
 
 # Pattern-specific Variable Values
 
@@ -279,6 +291,7 @@ src/main.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
 
 clean:
 #  Phony target (prerequisite of .PHONY).
@@ -296,7 +309,6 @@ clean:
 
 # Not a target:
 all:
- 
 #  Command line target.
 #  Implicit rule search has been done.
 #  File does not exist.
@@ -336,6 +348,6 @@ makefile:
 # strcache performance: lookups = 29 / hit rate = 37%
 # hash-table stats:
 # Load=18/8192=0%, Rehash=0, Collisions=0/29=0%
-# Finished Make data base on Fri May 20 12:58:47 2022
+# Finished Make data base on Sat May 21 13:22:22 2022
 
  
