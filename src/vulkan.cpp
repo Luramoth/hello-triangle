@@ -46,13 +46,13 @@ public:
     }
 
 private:
-    GLFWwindow* window;
+    GLFWwindow* window;// class for GLFW window
 
-    VkInstance instance;
-    VkDebugUtilsMessengerEXT debugMessenger;
-    VkSurfaceKHR surface;
+    VkInstance instance;// class for the vulkan instance
+    VkDebugUtilsMessengerEXT debugMessenger;// class for the debug messangeing system
+    VkSurfaceKHR surface;// class for the surface on which vulkan renders to
 
-    VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
+    VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;// class for the actual device vulkan renders to
     VkDevice device;
 
     VkQueue graphicsQueue;
